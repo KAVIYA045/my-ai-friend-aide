@@ -3,6 +3,7 @@ import { ChatMessage } from "./ChatMessage";
 import { ChatInput } from "./ChatInput";
 import { Card } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { generateAIResponse } from "@/utils/aiResponses";
 
 interface Message {
   id: string;
@@ -15,7 +16,7 @@ export const ChatInterface = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
-      text: "Hello! I'm your AI assistant. How can I help you today?",
+      text: "Hello! I'm Kaviya's AI assistant. I can tell you about her background, skills, projects, and experience in Prompt Engineering and AI development. What would you like to know?",
       isUser: false,
       timestamp: new Date(),
     },
@@ -40,17 +41,18 @@ export const ChatInterface = () => {
     setMessages((prev) => [...prev, userMessage]);
     setIsTyping(true);
 
-    // Simulate AI response
+    // Generate AI response based on user message
     setTimeout(() => {
+      const responseText = generateAIResponse(text);
       const aiMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: "I'm a demo AI assistant. To connect me to a real AI, you can integrate with AI services using Lovable Cloud!",
+        text: responseText,
         isUser: false,
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, aiMessage]);
       setIsTyping(false);
-    }, 1000);
+    }, 800);
   };
 
   return (

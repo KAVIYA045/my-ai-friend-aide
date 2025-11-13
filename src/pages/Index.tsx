@@ -13,25 +13,25 @@ const Index = () => {
         </div>
         
         <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent leading-tight">
-          AI That Assists You
+          Meet Kaviya's AI Assistant
         </h1>
         
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-          Experience intelligent conversations powered by AI. Get help, insights, and answers instantly.
+          Learn about Kaviya R - Computer Science Engineering student specializing in Prompt Engineering and AI Development
         </p>
 
         <div className="flex flex-wrap gap-4 justify-center mb-16">
           <div className="flex items-center gap-2 text-foreground">
             <Zap className="w-5 h-5 text-primary" />
-            <span className="text-sm font-medium">Instant Responses</span>
+            <span className="text-sm font-medium">Prompt Engineering Expert</span>
           </div>
           <div className="flex items-center gap-2 text-foreground">
             <MessageSquare className="w-5 h-5 text-accent" />
-            <span className="text-sm font-medium">Natural Conversations</span>
+            <span className="text-sm font-medium">AI Development Focus</span>
           </div>
           <div className="flex items-center gap-2 text-foreground">
             <Sparkles className="w-5 h-5 text-primary" />
-            <span className="text-sm font-medium">Smart Assistance</span>
+            <span className="text-sm font-medium">Full Stack Skills</span>
           </div>
         </div>
       </section>
@@ -44,7 +44,8 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t border-border py-8">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>Built with Lovable • Your AI Assistant Platform</p>
+          <p>Kaviya R - Computer Science Engineering Student | Prompt Engineering & AI Development</p>
+          <p className="mt-2">📧 22cs045@dmngpt.ac.in | 📞 +91 70949703960</p>
         </div>
       </footer>
     </div>
