@@ -1,12 +1,18 @@
 import { ChatInterface } from "@/components/ChatInterface";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Sparkles, Zap, MessageSquare } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-subtle">
+      {/* Header with Theme Toggle */}
+      <header className="container mx-auto px-4 pt-6 flex justify-end">
+        <ThemeToggle />
+      </header>
+
       {/* Hero Section */}
-      <section className="container mx-auto px-4 pt-20 pb-12 text-center">
+      <section className="container mx-auto px-4 pt-12 pb-12 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-secondary/50 border border-border">
           <Sparkles className="w-4 h-4 text-primary" />
           <span className="text-sm font-medium text-foreground">Your Personal AI Assistant</span>
