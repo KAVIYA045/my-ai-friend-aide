@@ -78,9 +78,9 @@ export const ChatInterface = () => {
           ))}
           {isTyping && (
             <div className="flex gap-1 items-center text-muted-foreground animate-fadeIn">
-              <div className="w-2 h-2 bg-primary rounded-full animate-bounce [animation-delay:-0.3s]" />
-              <div className="w-2 h-2 bg-primary rounded-full animate-bounce [animation-delay:-0.15s]" />
-              <div className="w-2 h-2 bg-primary rounded-full animate-bounce" />
+              <div className="w-3 h-3 bg-primary rounded-full animate-blink" />
+              <div className="w-3 h-3 bg-primary rounded-full animate-blink-delay-1" />
+              <div className="w-3 h-3 bg-primary rounded-full animate-blink-delay-2" />
             </div>
           )}
         </div>
