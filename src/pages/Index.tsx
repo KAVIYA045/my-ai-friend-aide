@@ -1,15 +1,41 @@
+import { useState } from "react";
 import { ChatInterface } from "@/components/ChatInterface";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Sparkles, Zap, MessageSquare } from "lucide-react";
+import { ProfileModal } from "@/components/ProfileModal";
+import { Sparkles, Zap, MessageSquare, UserPlus, FileEdit } from "lucide-react";
 
 const Index = () => {
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-subtle">
-      {/* Header with Theme Toggle */}
-      <header className="container mx-auto px-4 pt-6 flex justify-end">
+      {/* Header with Theme Toggle and Profile Buttons */}
+      <header className="container mx-auto px-4 pt-6 flex justify-end gap-3">
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => setIsProfileModalOpen(true)}
+          className="gap-2"
+        >
+          <UserPlus className="w-4 h-4" />
+          Build My Profile
+        </Button>
+        <Button
+          variant="outline"
+          size="sm"
+          className="gap-2"
+        >
+          <FileEdit className="w-4 h-4" />
+          Update Doc
+        </Button>
         <ThemeToggle />
       </header>
+
+      <ProfileModal
+        open={isProfileModalOpen}
+        onOpenChange={setIsProfileModalOpen}
+      />
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-12 pb-12 text-center">
