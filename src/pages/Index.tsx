@@ -3,10 +3,12 @@ import { ChatInterface } from "@/components/ChatInterface";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ProfileModal } from "@/components/ProfileModal";
+import { ResumeUpdateModal } from "@/components/ResumeUpdateModal";
 import { Sparkles, Zap, MessageSquare, UserPlus, FileEdit } from "lucide-react";
 
 const Index = () => {
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-subtle">
@@ -24,6 +26,7 @@ const Index = () => {
         <Button
           variant="outline"
           size="sm"
+          onClick={() => setIsResumeModalOpen(true)}
           className="gap-2"
         >
           <FileEdit className="w-4 h-4" />
@@ -35,6 +38,11 @@ const Index = () => {
       <ProfileModal
         open={isProfileModalOpen}
         onOpenChange={setIsProfileModalOpen}
+      />
+
+      <ResumeUpdateModal
+        open={isResumeModalOpen}
+        onOpenChange={setIsResumeModalOpen}
       />
 
       {/* Hero Section */}
